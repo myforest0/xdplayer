@@ -67,6 +67,7 @@ export default function CheckLogin() {
     return <Modal title="登录小滴课堂"
                   className={styles.check_login_modal}
                   footer={null}
+                  mask
                   open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
         <Form
             labelCol={{span: 5}}

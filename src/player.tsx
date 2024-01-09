@@ -72,7 +72,7 @@ export function Player() {
                 <MediaProvider>
                     <Poster
                         className={`${styles.poster} vds-poster`}
-                        src="/hy.jpg"
+                        src="/xdplayer/hy.jpg"
                         alt="开通超级会员可全网免费观看海量在线专题课程：Java基础、数据库、JavaWeb、JavaEE前沿框架、互联网新技术……"
                     />
                 </MediaProvider>
