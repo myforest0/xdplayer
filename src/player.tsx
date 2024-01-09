@@ -78,7 +78,6 @@ export function Player() {
                 </MediaProvider>
                 <VideoLayout/>
             </MediaPlayer>
-
             <CheckLogin/>
         </Provider>
     );
