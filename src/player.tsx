@@ -14,13 +14,13 @@ import {
     type MediaPlayerInstance,
     type MediaProviderAdapter,
     type MediaProviderChangeEvent,
-    type MediaViewType,
+    type MediaViewType, DefaultVideoLayout,
 } from '@vidstack/react';
 
 import {VideoLayout} from './layouts/video-layout';
 import CheckLogin from "./components/CheckLogin";
 import {Provider} from "./store";
-
+import {defaultLayoutIcons} from "@vidstack/react/player/layouts/default";
 
 export function Player() {
     const [state, setStore] = useState(JSON.parse(window.localStorage.getItem('store') || "{}") || {})

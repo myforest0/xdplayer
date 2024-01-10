@@ -54,7 +54,7 @@ export function List({placement, tooltipPlacement}: SettingsProps) {
                 </Tooltip.Content>
             </Tooltip.Root>
 
-            <Menu.Content className="vds-menu-items" placement={placement} style={{minHeight: 400}}>
+            <Menu.Content className="vds-menu-items" placement={placement} style={{minHeight: 200}}>
                 <Menu.RadioGroup className="vds-radio-group" value={store?.currentProduct?.productId}>
                     {/*<Menu.Radio className="vds-radio" value={""}>*/}
                     <Space style={{
@@ -141,11 +141,11 @@ export function Chapters({placement, tooltipPlacement}: SettingsProps) {
         request.get(`/api/chapter/v1/list?productId=${store?.currentProduct?.productId}`).then(res => {
             setList(res.data.data || [])
             const first = res.data.data?.[0]?.episodeList?.[0]
-
+            // console.log(store?.currentProduct)
             request.post('/api/product/v1/get_play_url', {
                 "vodType": "HWYUN",
                 "productId": first?.productId,
-                "episodeId": first?.id
+                "episodeId": store?.currentProduct?.currentEpisodeId || first?.id
             }).then(res => {
                 store.setStore({
                     currentPlay: res.data.data

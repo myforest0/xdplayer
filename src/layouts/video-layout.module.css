@@ -26,9 +26,17 @@
   align-items: center;
   width: 100%;
 
-  background-color: rgba(0,0,0,.8);
+  background-color: rgba(0,0,0,.6);
 }
-
+.controlsGroupTop {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding-inline: 8px;
+  padding-top: 8px;
+  background-color: rgba(0,0,0,.6);
+  padding-bottom: 8px;
+}
 .controlsGroup {
   padding-inline: 8px;
 }
